@@ -1,4 +1,12 @@
 //Actual code
+function preload(){
+    const sound = new Audio();
+    for(let i=0;i<17;i++){
+        sound.src = "animal-sounds/" + sounds[i];
+        sound.load();
+    }
+}
+preload();
 const keys = document.querySelectorAll('.key');
 const keySpan = document.querySelectorAll('.key span');
 const container = document.querySelector('.container');
