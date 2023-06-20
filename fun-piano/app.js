@@ -1,4 +1,10 @@
 //Actual code
+const keys = document.querySelectorAll('.key');
+const keySpan = document.querySelectorAll('.key span');
+const container = document.querySelector('.container');
+const show = document.querySelector('#show');
+const funny = document.querySelector('#funny');
+const sounds = ['bee.mp3', 'bird-whistle.mp3', 'cow2.mp3', 'cat2.mp3', 'goat.mp3', 'funny-kiss.mp3', 'elephant.mp3', 'horse.mp3', 'pig.mp3', 'cartoon-giggle.mp3', 'game-character.mp3', 'pigeon.mp3', 'funny-sneeze.mp3', 'sheep.mp3', 'child-laugh.mp3', 'monkey-laugh.mp3', 'clown-horn.mp3'];
 function preload(){
     const sound = new Audio();
     for(let i=0;i<17;i++){
@@ -7,12 +13,6 @@ function preload(){
     }
 }
 preload();
-const keys = document.querySelectorAll('.key');
-const keySpan = document.querySelectorAll('.key span');
-const container = document.querySelector('.container');
-const show = document.querySelector('#show');
-const funny = document.querySelector('#funny');
-const sounds = ['bee.mp3', 'bird-whistle.mp3', 'cow2.mp3', 'cat2.mp3', 'goat.mp3', 'funny-kiss.mp3', 'elephant.mp3', 'horse.mp3', 'pig.mp3', 'cartoon-giggle.mp3', 'game-character.mp3', 'pigeon.mp3', 'funny-sneeze.mp3', 'sheep.mp3', 'child-laugh.mp3', 'monkey-laugh.mp3', 'clown-horn.mp3'];
 const audio = new Audio();
 keys.forEach(key => {
     key.addEventListener('click', function(){
