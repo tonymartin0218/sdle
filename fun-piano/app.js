@@ -5,10 +5,18 @@ const container = document.querySelector('.container');
 const show = document.querySelector('#show');
 const funny = document.querySelector('#funny');
 const sounds = ['bee.mp3', 'bird-whistle.mp3', 'cow2.mp3', 'cat2.mp3', 'goat.mp3', 'funny-kiss.mp3', 'elephant.mp3', 'horse.mp3', 'pig.mp3', 'cartoon-giggle.mp3', 'game-character.mp3', 'pigeon.mp3', 'funny-sneeze.mp3', 'sheep.mp3', 'child-laugh.mp3', 'monkey-laugh.mp3', 'clown-horn.mp3'];
+const sounds2 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', 'w', 'e', 't', 'y', 'u', 'o', 'p'];
 function preload(){
     const sound = new Audio();
     for(let i=0;i<17;i++){
         sound.src = "animal-sounds/" + sounds[i];
+        sound.load();
+    }
+}
+function preload2(){
+    const sound = new Audio();
+    for(let i=0;i<17;i++){
+        sound.src = "audio/" + sounds2[i] + '.mp3';
         sound.load();
     }
 }
