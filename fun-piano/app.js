@@ -18,7 +18,7 @@ keys.forEach(key => {
     key.addEventListener('click', function(){
         const value = key.getAttribute('data-value');
         // console.log(value)
-        const val = key.innerText;
+        const val = key.innerText.toLowerCase();
         audio.currentTime = 0;
         if(funny.checked){
                 audio.src="animal-sounds/" + sounds[value];
