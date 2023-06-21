@@ -3,13 +3,12 @@
     src: url(../fonts/SenjaSantuy.otf);
 }
 
-
 main {
     padding: 20px;
 }
 .coin {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     position: relative;
     transform-style: preserve-3d;
     margin: 16px auto;
@@ -49,7 +48,7 @@ h2 {
 }
 .result {
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
 }
 @keyframes flip-tails {
     from {
@@ -68,15 +67,15 @@ h2 {
     }
 }
 .button {
-    width: 250px;
-    height: 100px;
+    width: 200px;
+    height: 70px;
     background: #03045e;
-    line-height: 100px;
+    line-height: 70px;
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     color: #fff;
     border-radius: 20px;
-    margin: 32px auto;
+    margin: 16px auto;
     cursor: pointer;
     font-family: Helvetica, sans-serif;
     user-select: none;
