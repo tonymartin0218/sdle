@@ -68,7 +68,7 @@ window.addEventListener('keydown', function(e){
         }, 300)
     }
     button.click();
-    console.log(button)
+    // console.log(button)
 });
 
 window.addEventListener('dblclick', () => {
