@@ -1,0 +1,152 @@
+/* Piano */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+*:active {
+    box-shadow: none;
+    background-image: none;
+    outline: none;
+    user-select: none;
+}
+body {
+    background: #333;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 350px;
+    aspect-ratio: 60/35;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    user-select: none;
+}
+.piano, .top {
+    display: flex;
+}
+.piano {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.piano .white {
+    width: 10%;
+    height: 80%;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border: solid 1px;
+    border-radius: 6px;
+    color: #222;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.piano .black {
+    width: 8%;
+    height: 50%;
+    background: linear-gradient(#333, #000);
+    margin-left: -4%;
+    margin-right: -4%;
+    border-radius: 0 0 6px 6px;
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+.piano .white span, .piano .black span {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.top {
+    justify-content: space-between;
+    margin: 2px 8px 16px 8px;
+    align-items: baseline;
+}
+.checkbox {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background: #333;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 12px;
+    margin-bottom: -4px;
+    outline: none;
+}
+.checkbox::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #666;
+    position: absolute;
+    left: 4px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .4s;
+}
+.checkbox:checked::before {
+    background: #fff;
+    left: 20px;
+}
+.showKeys {
+    font-size: 1.1rem;
+    position: relative;
+}
+.pc {
+    font-size: 10px;
+    position: absolute;
+    top: -12px;
+}
+.message {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #222;
+    z-index: 1000;
+    color: #fff;
+    font-size: 25px;
+    display: none;
+}
+ @media (max-width: 860px) {
+    .container, .piano {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width: 520px) and (orientation: portrait) {
+    .message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.piano .white:active, .piano .activeWhite {
+    background: #ddd;
+}
+.piano .black:active, .piano .activeBlack {
+    background: #333;
+}
+.dblscreen {
+    display: none;
+}
